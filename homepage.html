@@ -45,53 +45,92 @@ This challenge will test your understanding of linking, structure, forms, tables
     <title>Homepage Challenge</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <!-- Navigation bar: Link to sections and other HTML files -->
-    <nav>
-        <!-- Example: <a href="#about">About Section</a> | <a href="#contact">Contact Section</a> | <a href="about.html">About Page</a> | <a href="contact.html">Contact Page</a> -->
-    </nav>
-    <hr>
-    <!-- Main content area -->
-    <div class="main-content" id="main-content">
-        <!-- Section 1: About  add id call it about section -->
-        <section >
-            <!-- Your About content here -->
-        </section>
-        <!-- Section 2: add id call it  Contact  -->
-        <section >
-            <!-- Your Contact content here -->
-        </section>
+<body style="background-color: brown;">
+   <div id="nav" class="navigation">
+    <!-- Each link uses an anchor tag that points to a section by ID -->
+    <a href="#about">About</a> |
+    <a href="#contact">Contact</a>
+    <a href="#homepage.html">homepage.html</a>
+  </div>
+
+  <hr>
+
+  <!-- Main content area -->
+  <div id="main-content">
+
+    <!-- About Section -->
+    <div id="about" class="section">
+      <h2>About</h2>
+      <p>Hello! My name is Adam, and this is my homepage. I’m learning HTML and practicing my skills.</p>
     </div>
-    <hr>
-    <!-- Embed another HTML file using iframe add a youtube video -->
-    <div class="iframe-area" id="iframe-area">
-        <!-- Example: <iframe src="about.html" width="400" height="200"></iframe> -->
+
+    <!-- Contact Section -->
+    <div id="contact" class="section">
+      <h2>Contact</h2>
+      <p>If you’d like to reach out, feel free to send me a message using the form below.</p>
     </div>
-    <hr>
-    <!-- Small form with labels and inputs -->
-    <div class="form-area" id="form-area">
-        <!-- Example:
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            <input type="submit" value="Submit">
-        </form>
-        -->
-    </div>
-    <hr>
-    <!-- Table to display names but dont copy mine add more names and more rows atleast 3 rows and columns -->
-    <div class="table-area" id="table-area">
-        <!-- Example:
-        <table>
-            <tr><th>Name</th></tr>
-            <tr><td>Alice</td></tr>
-            <tr><td>Bob</td></tr>
-            <tr><td>Charlie</td></tr>
-        </table>
-        -->
-    </div>
-    <!-- Add comments throughout your code explaining your choices! -->
-</body>
-</html>
+
+  </div>
+
+  <hr>
+
+  <!-- Embed another HTML file using iframe -->
+  <div id="iframe-container" class="container">
+    <!-- For demo purposes, this will load about.html -->
+    <!-- You can replace "about.html" with any other HTML file you have -->
+    <h3>Embedded Page:</h3>
+    <iframe src="about.html" width="600" height="300" title="About Page"></iframe>
+  </div>
+
+  <hr>
+
+  <!-- Contact Form -->
+  <div id="form-container" class="container">
+    <h3>Contact Form</h3>
+    <!-- Form with at least two labeled inputs -->
+    <form action="/submit" method="post">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <input type="submit" value="Send">
+    </form>
+  </div>
+
+  <hr>
+
+  <!-- Table Section -->
+  <div id="table-container" class="container">
+    <h3>Team Members</h3>
+    <!-- Table with header row and at least three names -->
+    <table border="1" cellpadding="5">
+      <tr>
+        <th>Name</th>
+        <th>Role</th>
+        <th>Email</th>
+      </tr>
+      <tr>
+        <td>Alice Johnson</td>
+        <td>Developer</td>
+        <td>alice@example.com</td>
+      </tr>
+      <tr>
+        <td>Bob Smith</td>
+        <td>Designer</td>
+        <td>bob@example.com</td>
+      </tr>
+      <tr>
+        <td>Charlie Brown</td>
+        <td>Manager</td>
+        <td>charlie@example.com</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- End of page -->
+  <hr>
+  <div id="footer" class="footer">
+    <p>&copy; 2025 Adam’s Homepage</p>
+  </div>
